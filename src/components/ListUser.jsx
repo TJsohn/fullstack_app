@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import "./User.css";
 
 export function ListUser() {
   const [users, setUsers] = useState([]);
@@ -49,7 +50,7 @@ export function ListUser() {
 
   return (
     <>
-      <h2>List Users</h2>
+      <h2>User List</h2>
       <div className="userList">
       <table border="1" cellPadding="10">
         <thead>
@@ -76,7 +77,7 @@ export function ListUser() {
                     <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value})} />
                   </td>
                   <td>
-                    <input type="number" value={form.mobile} onChange={(e) => setForm({ ...form, mobile: e.target.value })} />
+                    <input type="tel" value={form.mobile} onChange={(e) => setForm({ ...form, mobile: e.target.value })} />
                   </td>
                   <td>
                     <button onClick={() => handleUpdate(user.id)}>Save</button>

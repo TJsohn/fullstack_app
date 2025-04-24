@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+import "./User.css";
 
 const CreateUser = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const CreateUser = () => {
 
   return (
     <div>
-      <h2>CreateUser</h2>
+      <h2>Create User</h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
         <input type="text" name="name" onChange={handleChange} />
